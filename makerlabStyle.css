@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+.container{
+    margin: 0 auto;
+
+}
+
+nav .logo{
+    width: 15%;
+    height: 15%;
+    float: left;
+    padding: 10px 0;
+    margin-left: 10%;
+}
+
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav{
+    position: fixed;
+    background: #bfd37a;
+}
+
+nav.navScroll{
+    background: #bfd37a;
+    opacity: 0.75;
+    height: 80px;
+    padding: 10px 50px;
+}
+
+nav.navScroll .logo{
+    height: 60px;
+    width: 10%;
+}
+
+
+nav ul{
+    float: right;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin:  0 35px;
+    padding-top: 45px;
+    position: relative;
+}
+
+nav ul li a{
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+nav ul li a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 0%;
+    background-color: #444;
+
+    position: absolute;
+    top: 0;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav ul li a:hover::before{
+    width: 100%;
+}
+
+
+section.sec1{
+    width: 100%;
+    margin-top: 125px;
+    height: 100vh;
+    background: url(BackgroundMainCropped.png);
+    background-size: cover;
+}
+
+section.sec2{
+    width: 100%;
+    margin-top: 125px;
+    height: 100vh;
+    background: white;
+    background-size: cover;
+}
+
+section.sec3{
+    width: 100%;
+    margin-top: 125px;
+    height: 100vh;
+    background: #f5f5f5;
+    background-size: cover;
+}
+
+section.sec4{
+    width: 100%;
+    margin-top: 125px;
+    height: 100vh;
+    background: white;
+    background-size: cover;
+}
+
+section.sec5{
+    width: 100%;
+    margin-top: 125px;
+    height: 100vh;
+    background: #f5f5f5;
+    background-size: cover;
+}
+
+section.sec6{
+    width: 100%;
+    margin-top: 125px;
+    height: 100vh;
+    background: white;
+    background-size: cover;
+}
+
+h1{
+    padding-top: 200px;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
