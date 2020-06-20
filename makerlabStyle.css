@@ -176,3 +176,44 @@ p{
     margin-left: auto;
     margin-right: auto;
 }
+
+.pictures_frontend{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pictures_frontend img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%; 
+}
+
+.aboutML1{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutML1 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.aboutML2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutML2 img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
