@@ -139,3 +139,40 @@ h1{
 p{
     text-align: center;
 }
+
+
+.team1{
+    margin: 0 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.team1 div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team2 div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team2{
+    margin: 50px 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.supervisor{
+    margin: 50px 200px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.supervisor img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
