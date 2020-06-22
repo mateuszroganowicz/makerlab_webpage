@@ -176,7 +176,7 @@ p{
     margin-left: auto;
     margin-right: auto;
 }
-
+/*
 .pictures_frontend{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -188,7 +188,7 @@ p{
     margin-right: auto;
     margin-top: 50px;
     width: 80%; 
-}
+}*/
 
 .aboutML1{
     display: grid;
@@ -217,3 +217,100 @@ p{
     margin-right: auto;
     margin-top: 50px;
 }
+
+
+
+
+
+/* Position the image container (needed to position the left and right arrows) */
+
+.pictures_frontend{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.pictures_frontend img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 80%; 
+}
+  
+
+.mySlides {
+display: none;
+}
+
+.mySlides2 {
+display: none;
+}
+
+.prev2,
+.next2 {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.prev2{
+    left: 55%;
+}
+
+
+.next2 {
+right: 5%;
+
+}
+
+
+.prev,
+.next {
+cursor: pointer;
+position: absolute;
+top: 40%;
+width: auto;
+padding: 16px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+.next {
+right: 55%;
+}
+
+.prev{
+    left: 5%;
+}
+
+.prev:hover,
+.next:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev2:hover,
+.next2:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+  
