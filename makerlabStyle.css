@@ -307,9 +307,39 @@ p{
     top: 0;
 }
 
+.list_frontend{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.list_frontend li{
+    display: inline-block;
+    margin: 35px;
+    padding-top: 45px;
+    text-align: center;
+    position: relative;
+    font-size: 60px;
+    transition: 0.5s ease;
+    
+}
+
+.list_frontend li p{
+    font-size: 20px;
+    
+}
+
+.list_frontend li:hover{
+    font-size: 100px;
+    transition: 0.5s ease;
+}
+
 .pictures_mobile{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     position: relative;
 }
 
@@ -318,10 +348,30 @@ p{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    
-    width: 17%;
+    width: 34%;
 }
-  
+
+.pictures_mobile li{
+    list-style: none;
+    margin: 35px;
+    padding: 35px 100px;
+    padding-top: 45px;
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    transition: 0.5s ease;
+    
+}
+
+.pictures_mobile li p{
+    font-size: 20px;
+    
+}
+
+.pictures_mobile li:hover{
+    font-size: 50px;
+    transition: 0.5s ease;
+}
 
 .slidesMobile {
     display: none;
@@ -344,11 +394,11 @@ p{
 }
 
 .nextMobile {
-    right: 30%;
+    right: 10%;
 }
     
 .prevMobile{
-    left: 30%;
+    left: 60%;
 }
 
 .prevMobile:hover,

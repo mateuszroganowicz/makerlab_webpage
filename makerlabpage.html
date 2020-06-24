@@ -2,6 +2,7 @@
 <head>
     <link href="makerlabStyle.css" rel="stylesheet" type="text/css">
     <script   src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link href="fontawesome-free-5.13.1-web/css/all.css" rel="stylesheet">
     <script type="text/javascript">
         $(window).on('scroll', function(){
             if($(window).scrollTop()){
@@ -149,12 +150,26 @@
         
             <a class="prev2" onclick="plusSlidesStudent(-1)">&#10094;</a>
             <a class="next2" onclick="plusSlidesStudent(1)">&#10095;</a>
+
+            
         </div>
+        <ul class="list_frontend">
+            <li><i class="far fa-edit"></i><p>Accept/reject requests</p></li>
+            <li><i class="fas fa-tasks"></i><p>Maintain equipment</p></li>
+            <li><i class="far fa-plus-square"></i><p>Create project</p></li>
+            <li><i class="fas fa-cogs"></i><p>Rent equipment</p></li>
+        </ul>
     </section>
     <section class="sec4" id="sec4">
         <h1>
             Wiki
         </h1>
+        <p>
+            For the wiki page we forked the Django WIKI project and integrated with our system.  
+        </p>
+        <p>
+           We didn’t modify anything, because the base wiki covers the main requirements we thought about: to create articles to expose the projects being made in the DETI Maker Lab. 
+        </p>
     </section>
     <section class="sec5" id="sec5">
         <h1>
@@ -164,6 +179,11 @@
             To make it possible to have access to MakerLab from any place, we created mobile applicaitons for both, IOS and Android.
         </p>
         <div class="pictures_mobile" >
+            <div>
+                <li><i class="fas fa-mobile-alt"></i><p>Android and IOS application</p></li>
+                <li><i class="fas fa-user-graduate"></i><p>Most important features for student</p></li>
+                <li><i class="fas fa-globe-europe"></i><p>Use at any place</p></li>
+            </div>
             <div class="slidesMobile" style="display: block;">
                 <img src="pictures/mobile1.jpg" alt="mobile_main">
                 <p>Mobile App main page</p>
