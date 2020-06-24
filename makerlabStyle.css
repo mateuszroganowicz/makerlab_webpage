@@ -194,6 +194,8 @@ p{
     margin-top: 50px;
 }
 
+
+
 .aboutML2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -206,7 +208,11 @@ p{
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    
 }
+
+
+
 
 
 .pictures_frontend{
