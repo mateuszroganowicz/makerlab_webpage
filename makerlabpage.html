@@ -12,31 +12,6 @@
             }
         })
     </script>
-    <script>
-    var slideIndex2 = 1;
-    showSlides2(slideIndex2);
-
-    function plusSlides2(m) {
-    showSlides2(slideIndex2 += m);
-    }
-
-    function currentSlide2(m) {
-    showSlides2(slideIndex2 = m);
-    }
-
-    function showSlides2(m) {
-    var j;
-    var slides2 = document.getElementsByClassName("mySlides2");
-    
-    if (m > slides2.length) {slideIndex2 = 1}
-    if (m < 1) {slideIndex2 = slides2.length}
-    for (j = 0; j < slides2.length; j++) {
-        slides2[j].style.display = "none";
-    }
-    slides2[slideIndex2-1].style.display = "block";
-}
-    </script>
-
     <script type="text/javascript" src="makerLabjs.js"></script>
     <title>MakerLab</title>
 </head>
@@ -119,82 +94,82 @@
         </p>
         <div class="pictures_frontend">
 
-            <div class="mySlides" style="display: block;">
+            <div class="slidesTechnician" style="display: block;">
             <div class="numbertext">1 / 6</div>
                 <img src="technician_main.png">
                 <p>Technician page</p>
             </div>
         
-            <div class="mySlides">
+            <div class="slidesTechnician">
             <div class="numbertext">2 / 6</div>
                 <img src="student_main.png">
                 <p>Technician page</p>
             </div>
         
-            <div class="mySlides">
+            <div class="slidesTechnician">
             <div class="numbertext">3 / 6</div>
                 <img src="technician_main.png">
                 <p>Technician page</p>
             </div>
         
-            <div class="mySlides">
+            <div class="slidesTechnician">
             <div class="numbertext">4 / 6</div>
                 <img src="student_main.png">
                 <p>Technician page</p>
             </div>
         
-            <div class="mySlides">
+            <div class="slidesTechnician">
             <div class="numbertext">5 / 6</div>
                 <img src="technician_main.png">
                 <p>Technician page</p>
             </div>
         
-            <div class="mySlides">
+            <div class="slidesTechnician">
             <div class="numbertext">6 / 6</div>
                 <img src="student_main.png">
                 <p>Technician page</p>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlidesTechnicin(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesTechnician(1)">&#10095;</a>
         
-            <div class="mySlides2" style="display: block;">
+            <div class="slidesStudent" style="display: block;">
             <div class="numbertext">1 / 6</div>
                 <img src="technician_main.png">
                 <p>Student page</p>
             </div>
         
-            <div class="mySlides2">
+            <div class="slidesStudent">
             <div class="numbertext">2 / 6</div>
                 <img src="student_main.png">
                 <p>Student page</p>
             </div>
         
-            <div class="mySlides2">
+            <div class="slidesStudent">
             <div class="numbertext">3 / 6</div>
                 <img src="technician_main.png">
                 <p>Student page</p>
             </div>
         
-            <div class="mySlides2">
+            <div class="slidesStudent">
             <div class="numbertext">4 / 6</div>
                 <img src="student_main.png">
                 <p>Student page</p>
             </div>
         
-            <div class="mySlides2">
+            <div class="slidesStudent">
             <div class="numbertext">5 / 6</div>
                 <img src="technician_main.png">
                 <p>Student page</p>
             </div>
         
-            <div class="mySlides2">
+            <div class="slidesStudent">
             <div class="numbertext">6 / 6</div>
                 <img src="student_main.png">
                 <p>Student page</p>
             </div>
         
-            <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
-            <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+            <a class="prev2" onclick="plusSlidesStudent(-1)">&#10094;</a>
+            <a class="next2" onclick="plusSlidesStudent(1)">&#10095;</a>
         </div>
     </section>
     <section class="sec4" id="sec4">
@@ -209,6 +184,23 @@
         <p>
             To make it possible to have access to MakerLab from any place, we created mobile applicaitons for both, IOS and Android.
         </p>
+        <div class="pictures_mobile" >
+            <div class="slidesMobile" style="display: block;">
+                <img src="mobile1.jpg" alt="mobile_main">
+                <p>Mobile App main page</p>
+            </div>
+            <div class="slidesMobile">
+                <img src="mobile2.jpg" alt="mobile_main">
+                <p>Create project</p>
+            </div>
+            <div class="slidesMobile">
+                <img src="mobile3.jpg" alt="mobile_main">
+                <p>About</p>
+            </div>
+
+            <a class="prevMobile" onclick="plusSlidesMobile(-1)">&#10094;</a>
+            <a class="nextMobile" onclick="plusSlidesMobile(1)">&#10095;</a>
+        </div>
     </section>
     <section class="sec6" id="sec6">
         <h1>

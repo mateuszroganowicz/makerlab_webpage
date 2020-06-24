@@ -28,6 +28,7 @@ header::after{
 nav{
     position: fixed;
     background: #bfd37a;
+    z-index: 100;
 }
 
 nav.navScroll{
@@ -133,9 +134,10 @@ section.sec6{
 }
 
 h1{
-    padding-top: 200px;
+    padding-top: 100px;
     text-align: center;
 }
+
 p{
     text-align: center;
 }
@@ -176,19 +178,7 @@ p{
     margin-left: auto;
     margin-right: auto;
 }
-/*
-.pictures_frontend{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 
-.pictures_frontend img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    width: 80%; 
-}*/
 
 .aboutML1{
     display: grid;
@@ -219,11 +209,6 @@ p{
 }
 
 
-
-
-
-/* Position the image container (needed to position the left and right arrows) */
-
 .pictures_frontend{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -239,12 +224,12 @@ p{
 }
   
 
-.mySlides {
-display: none;
+.slidesTechnician {
+   display: none;
 }
 
-.mySlides2 {
-display: none;
+.slidesStudent {
+    display: none;
 }
 
 .prev2,
@@ -255,6 +240,7 @@ display: none;
     width: auto;
     padding: 16px;
     color: white;
+    background-color: #bfd37a;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -268,28 +254,29 @@ display: none;
 
 
 .next2 {
-right: 5%;
+    right: 5%;
 
 }
 
 
 .prev,
 .next {
-cursor: pointer;
-position: absolute;
-top: 40%;
-width: auto;
-padding: 16px;
-color: white;
-font-weight: bold;
-font-size: 20px;
-border-radius: 0 3px 3px 0;
-user-select: none;
--webkit-user-select: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: #bfd37a;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .next {
-right: 55%;
+   right: 55%;
 }
 
 .prev{
@@ -298,19 +285,67 @@ right: 55%;
 
 .prev:hover,
 .next:hover {
-background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev2:hover,
 .next2:hover {
-background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .numbertext {
-color: #f2f2f2;
-font-size: 12px;
-padding: 8px 12px;
-position: absolute;
-top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.pictures_mobile{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+}
+
+.pictures_mobile img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    
+    width: 17%;
 }
   
+
+.slidesMobile {
+    display: none;
+}
+
+.prevMobile,
+.nextMobile {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    top: 40%;
+    color: white;
+    background-color: #bfd37a;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.nextMobile {
+    right: 30%;
+}
+    
+.prevMobile{
+    left: 30%;
+}
+
+.prevMobile:hover,
+.nextMobile:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
