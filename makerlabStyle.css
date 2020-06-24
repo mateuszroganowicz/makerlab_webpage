@@ -322,9 +322,13 @@ p{
     padding-top: 45px;
     text-align: center;
     position: relative;
+    
+    
+}
+
+.list_frontend li span{
     font-size: 60px;
     transition: 0.5s ease;
-    
 }
 
 .list_frontend li p{
@@ -332,7 +336,7 @@ p{
     
 }
 
-.list_frontend li:hover{
+.list_frontend li span:hover{
     font-size: 100px;
     transition: 0.5s ease;
 }
@@ -358,9 +362,13 @@ p{
     padding-top: 45px;
     text-align: center;
     position: relative;
+    
+    
+}
+
+.pictures_mobile li span{
     font-size: 40px;
     transition: 0.5s ease;
-    
 }
 
 .pictures_mobile li p{
@@ -368,8 +376,8 @@ p{
     
 }
 
-.pictures_mobile li:hover{
-    font-size: 50px;
+.pictures_mobile li span:hover{
+    font-size: 60px;
     transition: 0.5s ease;
 }
 
