@@ -34,6 +34,17 @@
     margin: 10px 0px 10px 30px;
 }
 
+.navbar-link-sub-sub
+{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    font-size: .85rem;
+    margin: 3px 0px 3px 50px;
+}
+
 .navbar-link .material-icons
 {
     margin-right: 12px;

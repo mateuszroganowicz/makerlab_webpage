@@ -413,3 +413,50 @@ p{
 .nextMobile:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+.pictures_wiki{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+}
+
+.pictures_wiki img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 70%;
+}
+
+.prevWIKI,
+.nextWIKI {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 16px;
+    top: 40%;
+    color: white;
+    background-color: #bfd37a;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.nextWIKI {
+    right: 10%;
+}
+    
+.prevWIKI{
+    left: 10%;
+}
+
+.prevWIKI:hover,
+.nextWIKI:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slidesWIKI {
+    display: none;
+}

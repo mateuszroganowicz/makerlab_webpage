@@ -1,6 +1,7 @@
 var slideIndexTechnician = 1;
 var slideIndexStudent = 1;
 var slideIndexMobile = 1;
+var slideIndexWIKI = 1;
 
 
 
@@ -62,5 +63,25 @@ function showSlidesMobile(m) {
         slidesMobile[j].style.display = "none";
     }
     slidesMobile[slideIndexMobile-1].style.display = "block";
+}
+
+function plusSlidesWIKI(m) {
+    showSlidesWIKI(slideIndexWIKI += m);
+}
+
+function currentSlideWIKI(m) {
+    showSlidesWIKI(slideIndexWIKI = m);
+}
+
+function showSlidesWIKI(m) {
+    var j;
+    var slidesWIKI = document.getElementsByClassName("slidesWIKI");
+
+    if (m > slidesWIKI.length) {slideIndexWIKI = 1}
+    if (m < 1) {slideIndexWIKI = slidesWIKI.length}
+    for (j = 0; j < slidesWIKI.length; j++) {
+        slidesWIKI[j].style.display = "none";
+    }
+    slidesWIKI[slideIndexWIKI-1].style.display = "block";
 }
 
