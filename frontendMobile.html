@@ -40,37 +40,29 @@
             <a href="#" class="navbar-link-sub">Subsection 3.2</a>
     </div>
     <div class="container">
-        <h1 class="title">System architecture</h1>
-        <img src="pictures/architecture.png"/>
+        <h1 class="title">FrontEnd</h1>
+        <p>
+            Technician is a person that will use mostly the frontend page. 
+            On that page, he has several very important functionalities like accepting or rejecting requests of the equipment, adding new equipment, 
+            editing already existing equipment and deleting equipment from the database. 
+            There is also a statistics page showing recent requests with the equipment name and group name, components condition (percentage of broken equipment), 
+            current project and most popular equipment with the equipment name and number of requests.
 
-        <h2>Database</h2>
-        <p>For our database we used the default Django choice: SQLite. </p>
-        <p>
-            For this project this database was enough, it stores data about users, projects, 
-            articles about projects and equipment and we had previous experience with this technology. 
-        </p>
-        <h2>API</h2>
-        <p>Both API’s were developed in Django, again, we had previous experience with.</p>
-        <p> 
-            Django offers a solid admin interface for the technician that he can use in alternative to our frontend. 
-            Doing the API methods such as GET and POST is very simple in Django. Also, Django deals very well with authentication issues. 
-        </p>
-        <h2>FrontEnd</h2>
-        <p>
-            To develop the front end we used HTML markup language to structure each site. For the styling of the pages we used CSS.
+            
+
         </p>
         <p>
-            In order to use the REST API a JavaScript technology called AJAX was used. 
-            It is a great solution for handling asynchronous calls to either GET or POST the data from/to the API and the database.
+            Django provides an admin page where those with permission can access and view the contents of the database, we thought that if there was any problem that couldn’t be resolved on the 
+            frontend, the technician could access the admin page and fix it there. The default implementation of the admin page provided by Django although functional, doesn’t provide features 
+            like finding an object for example. So we customize the admin page to make it easier to use, added features like filters and search bars, and make it display the information 
+            in a manner more akin to the excel sheets provided by the technician.
         </p>
-        <h2>Mobile Application</h2>
+
+        <h1 class="title">Mobile</h1>
         <p>
-            Both mobile apps were developed using Flutter, a native way to build apps for Android and iOS. 
-            With Flutter, the need to create two different apps is practically nonexistent.
-             That way, only one mobile application was actually developed, since it’s multiplatform.
-        </p>
-        <p>
-            Flutter uses dart as its main language and it’s used to both write the frontend pages and handle the backend. The http package was used to make the calls for the REST API.
+            The intent is to provide users (the students) with an easily accessible way to access 
+            information regarding the Makers Lab contents relevant to the users like the available equipment, 
+            their borrowed equipment, group details amongst others. As such we develop a web application to allow the students to access said contents.
         </p>
     </div>
 </body>

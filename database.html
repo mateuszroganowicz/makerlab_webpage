@@ -40,26 +40,15 @@
             <a href="#" class="navbar-link-sub">Subsection 3.2</a>
     </div>
     <div class="container">
-        <h1 class="title">Personas</h1>
-        <h2>Student/Teacher</h2>
-        <p>John is a 19 year old currently in his 2º year of university. In one of his classes he was asked to work on a group project. 
-            For that reason he needs a platform to manage said project, 
-            to request specialised equipment, and to coordinate better with his team.
+        <h1 class="title">Database</h1>
+        <p>
+            The platform uses the default SQL database implemented by the Django engine, whose models details (ie. the SQL  tables) 
+            are defined in the models.py document. From that document Django automatically translates the python code and creates the database objects. 
+            The database scheme can be seen above. 
+            Some details worth mentioning are the way the images are stored. The “Equipments” model in the models.py file has an associated image, 
+            the database stored the path to the image while the image itself is stored outside in the “static” folder.
+            <img src="pictures/database1.png"/>
+
         </p>
-        <h2>Technician</h2>
-        <p>Mike works as technician at the University and is currently responsible for the equipment and resources available there. He has no IT or engineering knowledge. 
-            The software he is using at the moment is outdated, and for more convenient experience in management 
-            he needs a program that better fits his skills and is easy to use.
-        </p>
-        <h1 class="title">Use cases</h1>
-        <img src="pictures/usecases.png"/>
-        <ul>
-            <li>Create project: the user can create a new project, containing information like title, reference, number of contributors, equipment used. For project details, the user has to use the wiki page.</li>
-            <li>Request/return equipment: users can create a new request to borrow an equipment from the lab.</li>
-            <li>See information about projects/equipment: all details about equipment available in the makers lab can be found in the application.</li>
-            <li>Administrate the wiki page: the technician can edit, delete and purge any article in the wiki page.</li>
-            <li>Approve/deny request and returns: the technician, and only him, has the possibility to approve or deny requests made by users.</li>
-            <li>Stock management: the technician can do all crud operations to manage the stock of equipment.</li>
-        </ul>
     </div>
 </body>
