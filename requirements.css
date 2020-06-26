@@ -1,7 +1,41 @@
+@font-face{
+    font-family: Quicksand;
+    src: url("fonts/Quicksand/static/Quicksand-Light.ttf");
+}
+
+@font-face{
+    font-family: QuicksandBold;
+    src: url("fonts/Quicksand/static/Quicksand-Regular.ttf");
+}
 .container{
     margin-left: 200px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
 }
 
 .title{
     text-align: center;
+    font-family: QuicksandBold;
+}
+
+h2{
+    text-align: center;
+    font-family: QuicksandBold;
+}
+
+p{
+    text-align: center;
+    font-family: Quicksand;
+}
+
+li{
+    font-family: Quicksand;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

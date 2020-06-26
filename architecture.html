@@ -38,5 +38,36 @@
     </div>
     <div class="container">
         <h1 class="title">System architecture</h1>
+        <img src="pictures/architecture.png"/>
+
+        <h2>Database</h2>
+        <p>For our database we used the default Django choice: SQLite. </p>
+        <p>
+            For this project this database was enough, it stores data about users, projects, 
+            articles about projects and equipment and we had previous experience with this technology. 
+        </p>
+        <h2>API</h2>
+        <p>Both API’s were developed in Django, again, we had previous experience with.</p>
+        <p> 
+            Django offers a solid admin interface for the technician that he can use in alternative to our frontend. 
+            Doing the API methods such as GET and POST is very simple in Django. Also, Django deals very well with authentication issues. 
+        </p>
+        <h2>FrontEnd</h2>
+        <p>
+            To develop the front end we used HTML markup language to structure each site. For the styling of the pages we used CSS.
+        </p>
+        <p>
+            In order to use the REST API a JavaScript technology called AJAX was used. 
+            It is a great solution for handling asynchronous calls to either GET or POST the data from/to the API and the database.
+        </p>
+        <h2>Mobile Application</h2>
+        <p>
+            Both mobile apps were developed using Flutter, a native way to build apps for Android and iOS. 
+            With Flutter, the need to create two different apps is practically nonexistent.
+             That way, only one mobile application was actually developed, since it’s multiplatform.
+        </p>
+        <p>
+            Flutter uses dart as its main language and it’s used to both write the frontend pages and handle the backend. The http package was used to make the calls for the REST API.
+        </p>
     </div>
 </body>
