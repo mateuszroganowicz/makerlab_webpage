@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<head>
+    <link href="makerlabStyle.css" rel="stylesheet" type="text/css">
+    <script   src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="pictures/logo.png">
+    <script type="text/javascript">
+        $(window).on('scroll', function(){
+            if($(window).scrollTop()){
+                $('nav').addClass('navScroll');
+            }
+            else{
+                $('nav').removeClass('navScroll');
+            }
+        })
+    </script>
+    <script type="text/javascript" src="makerLabjs.js"></script>
+    <title>MakerLab</title>
+</head>
+<body>
+    <header>
+        <div class= "container">
+            
+            <nav>
+                <img src="pictures/logo2.png" class="logo">
+                <ul>
+                    <li><a href="#sec1">Main</a></li>
+                    <li><a href="#sec2">Motivation</a></li>
+                    <li><a href="#sec3">FrontEnd</a></li>
+                    <li><a href="#sec4">Wiki</a></li>
+                    <li><a href="#sec5">MobileApp</a></li>
+                    <li><a href="#sec6">Team</a></li>
+                    <li><a href="makerLabDocumentation.html">Documentation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="sec1" id="sec1">
+        <h1>Welcome to MakerLab</h1>
+        <p>MakerLab is a IoT laboratory for the students and professors among all the University of Aveiro.</p>
+
+        <p>It is located at the Department of Electronics, Telecommunication and Informatics.</p>
+
+        <p>Every student can rent any equipment from there. Each electronic device or even circuit parts can be requested.</p>
+    </section>
+    <section class="sec2" id="sec2">
+        <h1>Motivation</h1>
+        <p>
+            For this project our motivation was to help students and technician himself manage all the laboratory connected issues in an easy and the most convenient way possible.
+        </p>
+        <p>
+            With our application maintaining equipment and projects created by students is not only possible but also user friendly.
+        </p>
+        <div class="aboutML1">
+            <div>
+                <img src="pictures/search-icon.png"/>
+                <p>Browse through all parts</p>
+            </div>
+            <div>
+                <img src="pictures/project-icon.png"/>
+                <p>Create projects</p>
+            </div>
+            <div>
+                <img src="pictures/arduino-icon.png"/>
+                <p>Borrow and return equipments</p>
+            </div>
+            
+        </div>
+
+        <div class="aboutML2">
+            <div>
+                <img src="pictures/requests-icon.png"/>
+                <p>Manage requests</p>
+            </div>
+            <div>
+                <img src="pictures/maintenance-icon.png"/>
+                <p>Maintatin equipment</p>
+            </div>
+            <div>
+                <img src="pictures/statistics-icon.png"/>
+                <p>Check statistics</p>
+            </div>
+            
+        </div>
+    </section>
+    <section class="sec3" id="sec3">
+        <h1>
+            FrontEnd
+        </h1>
+        <p>
+            Web page is mostly for the technician, he can accept or reject renting equipment, add new equipment, edit already existing equipment or delete equipment.</p>
+        </p>
+        <p>
+            But students can also use the webpage to create a new project, rent equipment, browse through equipment and see their projects.
+        </p>
+        <div class="pictures_frontend">
+
+            <div class="slidesTechnician" style="display: block;">
+            <div class="numbertext">1 / 4</div>
+                <img src="pictures/tech_main.png">
+                <p>Technician page</p>
+            </div>
+        
+            <div class="slidesTechnician">
+            <div class="numbertext">2 / 4</div>
+                <img src="pictures/statistics.png">
+                <p>Statistics page</p>
+            </div>
+        
+            <div class="slidesTechnician">
+            <div class="numbertext">3 / 4</div>
+                <img src="pictures/add_equipment.png">
+                <p>Add equipment</p>
+            </div>
+        
+            <div class="slidesTechnician">
+            <div class="numbertext">4 / 4</div>
+                <img src="pictures/edit_equipment.png">
+                <p>Edit equipment</p>
+            </div>
+        
+            <a class="prev" onclick="plusSlidesTechnician(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlidesTechnician(1)">&#10095;</a>
+        
+            <div class="slidesStudent" style="display: block;">
+            <div class="numbertext">1 / </div>
+                <img src="pictures/st_main.png">
+                <p>Student page</p>
+            </div>
+        
+            <div class="slidesStudent">
+            <div class="numbertext">2 / 4</div>
+                <img src="pictures/rent_equipment.png">
+                <p>Rent equipment</p>
+            </div>
+        
+            <div class="slidesStudent">
+            <div class="numbertext">3 / 4</div>
+                <img src="pictures/equipment_details.png">
+                <p>Equipment details</p>
+            </div>
+        
+            <div class="slidesStudent">
+            <div class="numbertext">4 / 4</div>
+                <img src="pictures/display_projects.png">
+                <p>Display projects</p>
+            </div>
+        
+            
+        
+            <a class="prev2" onclick="plusSlidesStudent(-1)">&#10094;</a>
+            <a class="next2" onclick="plusSlidesStudent(1)">&#10095;</a>
+
+            
+        </div>
+        <ul class="list_frontend">
+            <li><span class="material-icons">done_outline</span><p>Accept/reject requests</p></li>
+            <li><span class="material-icons">settings</span><p>Maintain equipment</p></li>
+            <li><span class="material-icons">add_circle_outline</span><p>Create project</p></li>
+            <li><span class="material-icons">devices</span><p>Rent equipment</p></li>
+        </ul>
+    </section>
+    <section class="sec4" id="sec4">
+        <h1>
+            Wiki
+        </h1>
+        <p>
+            For the wiki page we forked the Django WIKI project and integrated with our system.  
+        </p>
+        <p>
+           We didn’t modify anything, because the base wiki covers the main requirements we thought about: to create articles to expose the projects being made in the DETI Maker Lab. 
+        </p>
+
+        <div class="pictures_wiki">
+
+            <div class="slidesWIKI" style="display: block;">
+            <div class="numbertext">1 / 2</div>
+                <img src="pictures/wiki1.png">
+                <p>Create new article</p>
+            </div>
+        
+            <div class="slidesWIKI">
+            <div class="numbertext">2 / 2</div>
+                <img src="pictures/wiki2.png">
+                <p>View articles</p>
+            </div>
+
+            <a class="prevWIKI" onclick="plusSlidesWIKI(-1)">&#10094;</a>
+            <a class="nextWIKI" onclick="plusSlidesWIKI(1)">&#10095;</a>
+        </div>
+    </section>
+    <section class="sec5" id="sec5">
+        <h1>
+            Mobile Application
+        </h1>
+        <p>
+            To make it possible to have access to MakerLab from any place, we created mobile applicaitons for both, IOS and Android.
+        </p>
+        <div class="pictures_mobile" >
+            <div>
+                <li><span class="material-icons">mobile_friendly</span><p>Android and IOS application</p></li>
+                <li><span class="material-icons" >person</span><p>Most important features for student</p></li>
+                <li><span class="material-icons">public</span><p>Use at any place</p></li>
+            </div>
+            <div class="slidesMobile" style="display: block;">
+                <img src="pictures/mobile1.jpg" alt="mobile_main">
+                <p>Mobile App main page</p>
+            </div>
+            <div class="slidesMobile">
+                <img src="pictures/mobile2.jpg" alt="mobile_main">
+                <p>Create project</p>
+            </div>
+            <div class="slidesMobile">
+                <img src="pictures/mobile3.jpg" alt="mobile_main">
+                <p>About</p>
+            </div>
+
+            <a class="prevMobile" onclick="plusSlidesMobile(-1)">&#10094;</a>
+            <a class="nextMobile" onclick="plusSlidesMobile(1)">&#10095;</a>
+        </div>
+    </section>
+    <section class="sec6" id="sec6">
+        <h1>
+            Our team
+        </h1>
+        <div class="team1">
+            <div>
+                <img src="pictures/vinicius.jpg" width="150px" height="150px" alt="vinicius"/>
+                <p>Vinícius Benite Ribeiro</p>
+                <p>Student number: 82773</p>
+                <p>email@ua.pt</p>
+            </div>
+            <div>
+                <img src="pictures/bernardo.jpg" width="150px" height="150px" alt="bernardo"/>
+                <p>Bernardo Rodriguez</p>
+                <p>Student number: 88835</p>
+                <p>bernardorodrigues@ua.pt</p>
+            </div>
+            <div>
+                <img src="pictures/miguel.png" width="150px" height="150px" alt="miguel"/>
+                <p>Miguel Matos</p>
+                <p>Student number: 89124</p>
+                <p>miguelcruzmatos@ua.pt</p>
+            </div>
+            
+        </div>
+        <div class="team2">
+            <div>
+                <img src="pictures/jakub.jpg" width="150px" height="150px" alt="jakub"/>
+                <p>Jakub Sztompka</p>
+                <p>Student number: 100731</p>
+                <p>jakub.sztompka@ua.pt</p>
+            </div>
+            <div>
+                <img src="pictures/mateusz.jpg" width="150px" height="150px" alt="mateusz"/>
+                <p>Mateusz Roganowicz</p>
+                <p>Student number: 96947</p>
+                <p>mateusz.roganowicz@ua.pt</p>
+            </div>
+            
+        </div>
+        <h1>Our supervisor</h1>
+
+        <div class="supervisor">
+            <img src="pictures/diogogomes.png" width="150px" height="150px" alt="supervisor"/>
+            <p>Diogo Gomes</p>
+            <p>dgomes@ua.pt</p>
+        </div>
+    </section>
+</body>
