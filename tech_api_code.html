@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<head>
+    <title>MakerLab Documentation</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="documentationStyle.css" rel="stylesheet" type="text/css">
+    <link href="requirements.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="pictures/logo.png">
+</head>
+<body>
+    <div class="navbar">
+        <a href="makerlabpage.html" class="navbar-link">
+            <span class="material-icons">home</span>
+            Main Page
+        </a>
+        <a href="makerLabDocumentation.html" class="navbar-link">
+            <span class="material-icons">home</span>
+            Home
+        </a>
+        <a href="makerLabDocumentation.html" class="navbar-link">
+            <span class="material-icons">photo_library</span>
+            Specification
+        </a>
+
+            <a href="requirements.html" class="navbar-link-sub">Requirements</a>
+            <a href="personas_usecases.html" class="navbar-link-sub">Personas & use cases</a>
+            <a href="architecture.html" class="navbar-link-sub">System architecture</a>
+
+        <a href="#" class="navbar-link">
+            <span class="material-icons">question_answer</span>
+            Implementation
+        </a>
+
+        <a href="database.html" class="navbar-link-sub">Database</a>
+        <a href="technicianapi.html" class="navbar-link-sub">Technician API</a>
+        <a href="tech_api_code.html" class="navbar-link-sub-sub">Code</a>
+        <a href="wikiapi.html" class="navbar-link-sub">WIKI API</a>
+        <a href="frontendMobile.html" class="navbar-link-sub">FrontEnd and Mobile</a>
+        <a href="authentication.html" class="navbar-link-sub">Authentication</a>
+    </div>
+    <div class="container">
+        <h1 class="title">Technician API</h1>
+        
+        <p>
+            Our api is built in Python Django, following the basics principles of a Django application. For the technician API we have 6 main files:
+        </p>
+        <div>
+            <p>
+            Settings.py: here is where you should define the application settings, middlewares and plug-ins used in your project. Below is some important settings:
+            <ul>
+                <li>ALLOWED_HOSTS: if you want to deploy the application somewhere else, you need to add the host address here.</li>
+                <li>INSTALLED_APPS: all the plugins used must be listed here.</li>
+                <li>WSGI_APPLICATION: to deploy to Heroku, for example, you need to insert your app name here.</li>
+                <li>DATABASES: Django used SQLite3 as default. If you want to use a different database, you have to modify this field.</li>
+            </ul>
+            
+            
+            </p>
+            <p>Visit <a href="https://docs.djangoproject.com/en/3.0/topics/settings/ ">SITE</a> for more information about settings.py. </p>
+            <p>Visit <a href="https://docs.djangoproject.com/en/3.0/ref/settings/ ">SITE</a> for the full list of settings and their values.</p>
+        </div>
+        <h2 style="margin-top: 200px;">Models.py</h2>
+        <div >
+            <p>Models.py: The models.py file contains information regarding the database objects, each model class along with its fields is translated 
+                to sql and converted to tables in the django default sql database. Each model represents one table. 
+            </p>
+            <p>
+                The fields in each model can have attributes like a maximum size, or automatic value attribution on creation. This is also translated to sql and inputted in the database.   
+            </p>
+            <p>
+               The relationships between the models are also represented in the model.py file, they are denoted by OneToOne, oneToMany or ManyToMany fields.  
+            </p>
+            <p>
+               Each of the models its treated by python as a class so it can have methods/functions associated with him. 
+            </p>
+            <p>
+                All sql queries can be made using the python language, 
+                these will be translated by django to sql and called upon the database. They are mainly through the API to create objects or retrieve information about them.
+            </p>
+            <p>
+                The project contains 8 models:
+                <ul>
+                    <li>Equipment: to denoted each equipment type.</li>
+                    <li>Student: This represents the users (although not all users are students, the platform makes no distinction between students and teachers, so since the majority are students that’s the name of the model).</li>
+                    <li>Requests: Represents a request for an equipment.</li>
+                    <li>Entry: To store when an equipment is added to the database.</li>
+                    <li>Exit: To store when an equipment leaves the database.</li>
+                    <li>Group: Represents a group of students.</li>
+                    <li>Projects: The project that are being worked on.</li>
+                    <li>Missing: To store missing equipments.</li>
+                </ul>
+            </p>
+            <p>
+                For more information on models: <a href="https://docs.djangoproject.com/en/3.0/topics/db/models/" >SITE</a>
+                
+
+            </p>
+            <p>
+                More on queries: <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/">SITE</a> 
+            </p>
+
+            <p>
+                Models detailed:
+                One thing to note is that we wanted to create the database similar to what the technician had before our system, that being excel sheets, so we adopted the names used in the sheets. 
+            </p>
+            <p>
+                Equipments - The Equipment model is used to represent the total equipments that share the same features. For example if there would be 24 copper wires with 20 cm in the MakersLab there would be a single Equipment entry where the description would be ‘copper wire - 20 cm’ and the Total_items = 24, the price in the entry would be the price of a single copper wire.
+                Fields:
+                <ul>
+                    <li>Ref: The reference number of the equipment ( works as id )</li>
+                    <li>Family: Used to describe the family of the equipment</li>
+                    <li>Description: Description of the equipment</li>
+                    <li>Location: Where the equipment is stored</li>
+                    <li>Total_items: total equipments (in stock + borrowed)</li>
+                    <li>Borrowed_items: total equipments borrowed to students</li>
+                    <li>Price: Price of each individual equipment</li>
+                    <li>Broken: To represent whether the equipments are broken or ok</li>
+                    <li>Status: To say whether the equipments can be borrowed or not</li>
+                    <li>Image_file: Each equipment can have an image file associated with it, this image is not stored in the database, instead it is stored in the static/equipment folder</li>
+                </ul>
+            </p>
+            <p>
+                Projects - The MakerLab is meant to allow students to work on projects, each group of students can have an associated project,
+                 projects can’t exist without a group, the students of a group create the project for the group.
+                Fields:
+                <ul>
+                    <li>Code: Same as id</li>
+                    <li>Short_name: Abbreviation of the project name</li>
+                    <li>Name: Name of the project</li>
+                    <li>Year: Year when the project started</li>
+                    <li>Semester: Semester when the project started</li>
+                    <li>Equipment: Each project can have multiple equipments associated with it this is a oneToMany relationship</li>
+                </ul>
+            </p>
+            <p>
+
+                Student - Users of the platform
+                Fields:
+                <ul>
+                    <li>NMec: ‘Numero Mecanografico’ is the number assigned by the university to each student/staff ( works as id since no student has the same number)</li>
+                    <li>Name: Student name</li>
+                    <li>Mail: Student email</li>
+                </ul>
+            </p>
+            <p>
+                Group - A group of Students
+                Fields:
+                <ul>
+                    <li>Cod_group: Same as an id</li>
+                    <li>Year: Year when the group was created</li>
+                    <li>Group_number: Number chosen by the members of the group</li>
+                    <li>Cod_project: Project worked on by the group. This is an OneToOne relationship with the Project model</li>
+                    <li>Teacher: Group supervisor (has no special privileges)</li>
+                    <li>Students: The members of the group. OneToMany relationships with the Students model</li>
+                </ul>
+            </p>
+             <p>
+                 Entrance - Entry to signify when an Equipment is added to the lab
+                Fields:
+                <ul>
+                    <li>id</li>
+                    <li>Component_ref: Equipment that is being added. OneToOne Relationship with Equipment model</li>
+                    <li>Quantity: How many equipments are being added</li>
+                    <li>Date: when they where added</li>
+                    <li>Supplier: Who supplier the Equipments (this is a text field)</li>
+                    <li>Price_iva: ‘Imposto sobre o valor acrescentado’ How much tax was charged (in percentage)</li>
+                    <li>Price_unity: Price of each individual piece of equipment in the entry (not the same as the associated Equipment price)</li>
+                </ul>
+             </p>
+             <p>
+                Exit - Signifies when an Equipment leaves the lab
+                Fields:
+                <ul>
+                    <li>id</li>
+                    <li>Component_ref: Equipment that is being added. OneToOne Relationship with Equipment model</li>
+                    <li>Quantity: How many equipments are being added</li>
+                    <li>Year: when they left</li>
+                    <li>Project: Project that requested the Equipment</li>
+                    <li>Group: Group that requested the Equipment</li>
+                    <li>Timestamp: Time when the Equipment left</li>
+                </ul>
+             </p>
+             <p>
+                Request - When a Student asks for an equipment a request is added to the database
+                Fields:
+                <ul>
+                    <li>Id</li>
+                    <li>Equipment_ref: Equipment asked in the request , OneToOne relationship</li>
+                    <li>Project_ref: Project that made the Request, OneToOne relationship with a Project</li>
+                    <li>Timestamp: When the request was made </li>
+                    <li>Status: Status of the request can either be (pending, approved or denied by the lab technician)</li>
+                    <li>dateAcknowledged: Date when the lab Technician either approved or denied the request</li>
+                </ul>
+             </p>
+             <p>
+                Missing - To store Equipment that is missing
+	            Fields:
+                 <ul>
+                    <li>Id</li>
+                    <li>Equipment_ref: Type of Equipment that is missing. OneToOne Relationship with Equipment</li>
+                    <li>Project_ref: Project that is responsible for the loss of the Equipment OneToOne Relationship with Project</li> 
+                    <li>Year: year when the Equipment was added as missing</li>
+                    <li>Reason: Text field to say the reason for the equipment loss</li>
+                 </ul>
+             </p>
+
+        </div>
+
+        <h2 style="margin-top: 200px;">Serializers.py</h2>
+        <div >
+            <p>
+                Serializers.py: The serializers are used to translate the information retrieved from the sql queries to a compatible version that can be worked by python. 
+                When for example in the API we want to get all the Students in the database (using Equipments.objects.all()) 
+                the object containing the information about the students will can not be displayed in the webpage. 
+                So in order to make the object Json serializable we use a serializer to convert the fields.
+            </p>
+            <p>
+                Serializer allow us to choose which fields we want to serialize, in the project almost all of the objects have a serializer for all fields ( fields=’__all__’). 
+                The only exception is the Request model to witch there are two serializer one for POST and PUT requests and the other for all other requests, 
+                the one POST and PUT requests  (named RequestPostSerializer) contains all fields except the ‘dateAcknowledged’ field (since this one is meant to only be updated 
+                when a request is either accepted or denied. The other serializer (RequestSerializer) contains all fields and a depth=1 this means that also displays 
+                foreign keys up to one level depth so in this case instead of displaying only the id of the associated equipment and associated project, 
+                it will display all the equipment and project information.
+            </p>
+            <p>
+                More info:
+                <a href="https://www.django-rest-framework.org/api-guide/serializers/">SITE</a>
+            </p>
+        </div>
+
+        <h2 style="margin-top: 200px;">Admin.py</h2>
+        <div >
+            <p>
+                Admin.py: One of the main features of Django is the automatic creation of the admin site.
+                 This site creates a quick and easy way to allow authorized users to view and manage the Database and Website information. 
+            </p>
+            <p>
+                The admin page can be accessed by the following url: <domain-name>/tech/admin and providing a valid username and password. 
+                (The authorized user can be created by running the ‘python manage.py createsuperuser’)
+            </p>
+            <p>
+                In this project we customized the way that the admin page displays the database information namely the database tables. 
+            </p>
+            <p>
+                Depending on the table we added search bars, filters, link to foreign keys, ordering options and other functionalities. These changes are coded the the admin.py file.
+            </p>
+            <p>
+                The look of the webpages can also be customized. To change the look of a admin webpage for any equipment we have to create a html file in the directory:
+                templates/admin/technician_api/<object name>/<name of the html file we want to change>
+
+            </p>
+            <p>
+                Django also has a custom way that to creates webpages, besides allowing the input of some code in it, it also has a ‘block system’ 
+                that allows the overriding of the default implementation of the webpages. So it’s possible to easily extend the admin pages using said block system.
+
+            </p>
+            <p>More info on admin page: <a href="https://docs.djangoproject.com/en/3.0/ref/contrib/admin/">SITE</a></p>
+        </div>
+
+        <h2 style="margin-top: 200px;">Views.py</h2>
+        <div >
+            <p>
+                Views.py: basically, a view function, or view for short, is a Python function that takes a Web request and returns a Web response. 
+                All our API methods are declared here. For our project we used Django Rest Framework and its APIView classes.
+                 For simple GET and POST methods to retrieve or create objects, we use generics view.
+                 It is a simple, elegant and pythonic way to make these calls. For more complex calls we use APIViews and override the necessary methods.
+            </p>
+            <p>
+                More on views: <a href="https://docs.djangoproject.com/en/3.0/topics/http/views/" >SITE</a>
+            </p>
+            <p>
+                More about Django Rest Framework: <a href="https://www.django-rest-framework.org/" >SITE</a>
+            </p>
+            <p>
+                More on generics views: <a href="https://www.django-rest-framework.org/api-guide/generic-views/#generic-views" >SITE</a>
+
+
+            </p>
+            <p>
+               Complete API documentation for developers: <a href="https://makerlab2020.herokuapp.com/tech/swagger/ " >SITE</a>
+            </p>
+        </div>
+        <h2 style="margin-top: 200px;">Urls.py</h2>
+        <div >
+            <p>
+                Urls.py: here you will define the urls that will call the API. Frontend methods 
+                will call this urls expecting to receive a json file with the pertinent data as response. 
+                The list urlpatterns should contain all patterns to the urls used in your project. 
+            </p>
+        </div>
+        
+    </div>
+</body>

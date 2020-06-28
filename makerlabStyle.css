@@ -11,8 +11,8 @@ body{
 }
 
 nav .logo{
-    width: 15%;
-    height: 15%;
+    width: 8%;
+    height: 8%;
     float: left;
     padding: 10px 0;
     margin-left: 10%;
@@ -29,18 +29,19 @@ nav{
     position: fixed;
     background: #bfd37a;
     z-index: 100;
+    width: 100%;
 }
 
 nav.navScroll{
     background: #bfd37a;
     opacity: 0.75;
-    height: 80px;
-    padding: 10px 50px;
+    
+    padding: 10px;
 }
 
 nav.navScroll .logo{
-    height: 60px;
-    width: 10%;
+    height: 80px;
+    width: 80px;
 }
 
 

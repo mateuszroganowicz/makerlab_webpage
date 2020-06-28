@@ -38,3 +38,12 @@ img{
     display: block;
     margin: 50px auto;
 }
+
+video{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.promovideo{
+    font-size: 40px;
+}
